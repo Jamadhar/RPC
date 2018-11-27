@@ -18,7 +18,11 @@ app.controller("psoController", ['$scope', '$http',function($scope, $http) {
         data: {
             datasets: [{
                 label: 'Scatter Dataset',
-                data: $scope.swarm
+                data: $scope.swarm,
+                    /* Parâmetros adicionais de estilo */
+                backgroundColor: 'red',
+                borderColor: 'black',
+                
             }]
         },
         options: {
@@ -27,6 +31,10 @@ app.controller("psoController", ['$scope', '$http',function($scope, $http) {
                     type: 'linear',
                     position: 'bottom'
                 }]
+            },
+                /* Duração de animação (ms) */
+            animation: {
+                duration: '5000'
             },
             color: 'blue'
         }
